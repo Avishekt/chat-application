@@ -16,8 +16,8 @@ const publicDirectoryPath = path.join(__dirname, '/public')
 app.use(express.static(publicDirectoryPath))
 
 // View Engine Setup
-app.set('views',path.join(__dirname,'views'))
-app.set('view engine','ejs')
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
 
 
 io.on('connection', (socket) => {
@@ -47,7 +47,7 @@ io.on('connection', (socket) => {
         const filter = new Filter()
 
         if (filter.isProfane(message)) {
-            
+
             message = filter.clean(message)
         }
 
@@ -74,23 +74,23 @@ io.on('connection', (socket) => {
     })
 })
 
-app.get('/',function(req,res){
+app.get('/', function(req, res) {
     res.render('Home')
 })
 
-app.get('/guide',function(req,res){
+app.get('/guide', function(req, res) {
     res.render('Guide')
 })
 
-app.get('/about',function(req,res){
+app.get('/about', function(req, res) {
     res.render('About')
 })
 
-app.get('/chat',function(req,res){
+app.get('/chat', function(req, res) {
     res.render('Chat')
 })
 
-app.get('/*',function(req,res){
+app.get('/*', function(req, res) {
     res.render('404')
 })
 
