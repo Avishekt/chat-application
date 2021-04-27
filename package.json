@@ -1,0 +1,23 @@
+{
+  "name": "chat-room",
+  "version": "1.0.0",
+  "description": "This is Chat Application where users can chat with their friends easily by simply joining a room. It is a room based chatting site where all users can chat in that particular room with each other.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bad-words": "^3.0.4",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
+    "socket.io": "^2.4.1",
+    "socketio": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  },
+  "keywords": []
+}
